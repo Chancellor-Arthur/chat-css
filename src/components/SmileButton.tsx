@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React, { useState } from 'react';
 import Smiles from './Smiles';
-import icons from '../.svg';
+import icons from '../assets/svg';
 
 interface SmileProps {
   value: string;

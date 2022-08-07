@@ -43,7 +43,7 @@ const ChatContainer = () => {
   return (
     <ChatContainerWrapper>
       <Messages>
-        <Header>Чат</Header>
+        <Header>Приветствую!</Header>
         <QuestionPresets />
         {messages.map((message) => (
           <Message key={message.id} id={message.id} isUser={message.isUser} time={message.time} author={message.author}>
@@ -71,13 +71,13 @@ const Header = styled.h1`
 const ChatContainerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 16px dimgray;
-  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(51, 51, 51, 0.2);
+  border-radius: 4px;
   background: white;
   margin-top: 6px;
   margin-right: 15px;
   width: 380px;
-  height: 86vh;
+  height: calc(100vh - (15px + 58px + 21px + 6px));
   margin-bottom: 10vh;
 
   @media screen and (max-width: 410px) {
@@ -88,22 +88,22 @@ const ChatContainerWrapper = styled.div`
   }
 
   @media screen and (min-width: 411px) {
-    border-top: 5px solid blue;
+    border-top: 5px solid #0848c0;
   }
 `;
 
 const TextareaContainer = styled.form`
   display: flex;
   align-items: end;
-  border: 2px solid lightgray;
-  border-radius: 3px;
-  margin: 15px;
+  box-shadow: 0 0 1px 1px #d6dade;
+  border-radius: 2px;
+  margin: 16px;
   padding: 10px 5px;
 `;
 
 const Textarea = styled.textarea`
   width: 100%;
-  height: 50px;
+  height: 48px;
   resize: none;
   outline: none;
   border: none;
@@ -120,7 +120,8 @@ const Messages = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  gap: 10px;
+  gap: 16px;
+  max-height: 760px;
 
   ::-webkit-scrollbar {
     width: 5px;

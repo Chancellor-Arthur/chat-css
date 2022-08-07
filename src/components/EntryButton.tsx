@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { EntryButtonProps } from '../types/types';
-import icons from '../.svg';
+import icons from '../assets/svg';
 
 const EntryButton: FC<EntryButtonProps> = ({ visible, onClick }) => {
   return <Button visible={visible} onClick={onClick} />;
@@ -12,10 +12,10 @@ const Button = styled.button<{ visible: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
+  bottom: 15px;
+  right: 15px;
+  width: 58px;
+  height: 58px;
   border: none;
   cursor: pointer;
   background: url(${icons.backgroundIcon}) center no-repeat;
@@ -25,8 +25,8 @@ const Button = styled.button<{ visible: boolean }>`
     visible &&
     css`
       @media screen and (max-width: 410px) {
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
         top: 1px;
         right: 1px;
         background-image: url(${icons.backgroundIconMobile});
@@ -40,7 +40,7 @@ const Button = styled.button<{ visible: boolean }>`
     animation: ${({ visible }) =>
       visible
         ? 'showCross 1s linear'
-        : 'chatTransformToCross 1s, ascentIcon 1s reverse linear 5s, reverseAscentIcon 1s forwards linear 5s, reverseAscentIcon 1s reverse linear 10s, ascentIcon 1s forwards linear 10s'};
+        : 'chatTransformToCross 1s, ascentIcon 1s reverse linear 3s, reverseAscentIcon 1s forwards linear 3s, reverseAscentIcon 1s reverse linear 5s, ascentIcon 1s forwards linear 5s'};
 
     @keyframes ascentIcon {
       from {
@@ -113,7 +113,7 @@ const Button = styled.button<{ visible: boolean }>`
     top: 20px;
     background: no-repeat;
     animation: ${({ visible }) =>
-      !visible && 'showLeftTextIcon 5s linear 1s, showRightTextIcon 5s linear 6s, showTickIcon 5s linear 10s'};
+      !visible && 'showLeftTextIcon 3s linear 1s, showRightTextIcon 3s linear 3s, showTickIcon 4s linear 7s'};
 
     @keyframes showLeftTextIcon {
       from {
@@ -122,7 +122,7 @@ const Button = styled.button<{ visible: boolean }>`
       }
       50% {
         background-image: url(${icons.textLeftIcon});
-        height: 75%;
+        height: 100%;
       }
       75% {
         height: 0;

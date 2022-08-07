@@ -24,8 +24,9 @@ const SmileModal = styled.div`
   width: 200px;
   height: 150px;
   border: 1px solid #c3c5cc;
+  background: #ffffff;
   border-radius: inherit;
-  left: 15px;
+  left: 16px;
   display: grid;
   padding: 5px;
   gap: 5px;

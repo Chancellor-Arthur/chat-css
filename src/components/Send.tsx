@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React, { FC } from 'react';
-import icons from '../.svg';
+import icons from '../assets/svg';
 
 interface SendProps {
   createMessage: () => void;

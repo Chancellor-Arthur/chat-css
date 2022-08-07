@@ -16,9 +16,9 @@ const QuestionPresets = () => {
 const Questions = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px 1px 10px 1px;
-  margin-bottom: 70px;
+  gap: 8px;
+  padding: 9px 1px 9px 1px;
+  margin-bottom: 72px;
 
   @media screen and (max-width: 410px) {
     margin-right: 16px;
@@ -28,14 +28,14 @@ const Questions = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #cdd0d7;
-    box-shadow: 0 2px 4px lightgray;
+    border: 1px solid #dee3e9;
+    box-shadow: 0 2px 4px rgba(44, 48, 52, 0.15);
     border-radius: 8px;
-    height: 45px;
+    height: 43px;
     font-style: normal;
     font-size: 14px;
     line-height: 15px;
-    color: blue;
+    color: #0848c0;
     cursor: pointer;
   }
 `;
